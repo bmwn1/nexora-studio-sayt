@@ -3,255 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexora Studio | Veb-saytlar va brending</title>
+    <meta name="theme-color" content="#f5f5f0" />
     <meta
       name="description"
-      content="Nexora Studio - biznesingiz uchun zamonaviy veb-sayt, brending va onlayn savdo yechimlari."
+      content="Tribuna — futbol yangiliklari, o‘yin tahlili va muxlislar uchun eng sara hikoyalar."
+    />
+    <title>TRIBUNA — Futbol shu yerda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="announcement">
+      <div class="shell announcement-inner">
+        <span class="announcement-tag"><span class="live-dot"></span> FUTBOL RUHI</span>
+        <p>Har bir o‘yin — yangi hikoya. Uning markazida bo‘l.</p>
+        <a href="#yangiliklar">Yangiliklarni o‘qish <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
     <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#home" class="brand" aria-label="Nexora Studio bosh sahifa">
-          <span class="brand-mark">N</span>
-          <span>Nexora</span>
+      <div class="shell nav-wrap">
+        <a class="brand" href="#bosh-sahifa" aria-label="Tribuna bosh sahifa">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-word">TRIBUNA<span class="brand-period">.</span></span>
         </a>
-
-        <nav class="main-nav" aria-label="Asosiy navigatsiya">
-          <a href="#about">Biz haqimizda</a>
-          <a href="#services">Xizmatlar</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#pricing">Narxlar</a>
-          <a href="#contact">Bog'lanish</a>
+        <nav class="main-nav" id="main-nav" aria-label="Asosiy navigatsiya">
+          <a class="nav-link active" href="#bosh-sahifa">Bosh sahifa</a>
+          <a class="nav-link" href="#yangiliklar">Yangiliklar</a>
+          <a class="nav-link" href="#tahlil">Tahlil</a>
+          <a class="nav-link" href="#turnir">Turnirlar</a>
         </nav>
-
-        <a href="#contact" class="btn btn-primary">Bepul maslahat</a>
-        <button class="menu-toggle" aria-label="Menyu ochish" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a class="nav-cta" href="#yangiliklar">O‘yin ichida <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span>
         </button>
       </div>
     </header>
 
-    <main>
-      <section class="hero" id="home">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Zamonaviy biznes uchun raqamli yechimlar</p>
-            <h1>Saytingizni biznesingizning eng kuchli quroli qiling.</h1>
-            <p class="lead">
-              Biz sizga chiroyli, tez, va sotuvga yo'naltirilgan veb-sayt yaratamiz.
-              Veb-saytlar, brending, onlayn savdo va marketing uchun butun yechim.
-            </p>
-            <div class="hero-actions">
-              <a href="#portfolio" class="btn btn-primary">Ishlarni ko'rish</a>
-              <a href="#services" class="btn btn-secondary">Xizmatlar</a>
+    <main id="bosh-sahifa">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="kicker"><span class="kicker-line"></span> MAYDONDA NIMA GAP?</div>
+          <h1 id="hero-title">FUTBOL.<br />BU SHUNCHAKI<br /><span>O‘YIN EMAS.</span></h1>
+          <p class="hero-description">
+            Bu yurakdagi hayajon, so‘nggi daqiqadagi gol va birga kuylagan minglab ovozlar.
+            Futbol olamiga muxlis nigohi bilan qaraymiz.
+          </p>
+          <a class="button button-dark" href="#yangiliklar">Hikoyani boshlash <span aria-hidden="true">↗</span></a>
+          <div class="hero-footnote"><span class="footnote-mark">T</span> MAYDON RUHI. MUXLIS OVOZI.</div>
+        </div>
+        <div class="hero-art">
+          <img
+            class="hero-photo"
+            src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=85"
+            alt="Kechki futbol uchrashuvida yoritilgan stadion"
+            fetchpriority="high"
+          />
+          <div class="photo-shade"></div>
+          <div class="hero-art-top"><span class="art-label">O‘YINNING GO‘ZALLIGI</span><span class="art-index">01 / 04</span></div>
+          <div class="hero-caption">
+            <span class="caption-overline">BIZNING MAYDON</span>
+            <p>90 daqiqa.<br />Ming xil tuyg‘u.</p>
+          </div>
+          <span class="hero-stamp" aria-hidden="true">GOL!<span>⚽</span></span>
+          <div class="hero-image-credit">FUTBOL — BIZNI BIRLASHTIRADI</div>
+        </div>
+        <div class="hero-side-note" aria-hidden="true">BIR O‘YIN. BUTUN BIR OLAM.</div>
+      </section>
+
+      <section class="ticker" aria-label="Tribuna mavzulari">
+        <div class="ticker-track">
+          <span>KATTA FUTBOL</span><i>✳</i><span>HAQIQIY HIKOYA</span><i>✳</i><span>SO‘NGGI DAQIQAGACHA</span><i>✳</i><span>MUXLIS BILAN BIRGA</span><i>✳</i>
+          <span aria-hidden="true">KATTA FUTBOL</span><i aria-hidden="true">✳</i><span aria-hidden="true">HAQIQIY HIKOYA</span><i aria-hidden="true">✳</i><span aria-hidden="true">SO‘NGGI DAQIQAGACHA</span><i aria-hidden="true">✳</i><span aria-hidden="true">MUXLIS BILAN BIRGA</span><i aria-hidden="true">✳</i>
+        </div>
+      </section>
+
+      <section class="section news-section" id="yangiliklar">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">MAYDON TASHQARISIDA</p>
+              <h2>FUTBOL <span>OLAMI</span></h2>
             </div>
-            <ul class="hero-metrics" aria-label="Kompaniya ko'rsatkichlari">
-              <li><strong>120+</strong><span>yakunlangan loyiha</span></li>
-              <li><strong>4.9/5</strong><span>mijozlar bahosi</span></li>
-              <li><strong>7 kun</strong><span>tezkor ishga tushirish</span></li>
-            </ul>
+            <a class="text-link" href="#turnir">Barcha ruknlar <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="category-bar" role="group" aria-label="Yangiliklar bo‘yicha filter">
+            <button class="category-button selected" type="button" data-filter="all" aria-pressed="true">Barchasi <span>04</span></button>
+            <button class="category-button" type="button" data-filter="hikoya" aria-pressed="false">Hikoyalar</button>
+            <button class="category-button" type="button" data-filter="taktika" aria-pressed="false">Taktika</button>
+            <button class="category-button" type="button" data-filter="muxlis" aria-pressed="false">Muxlis nigohida</button>
           </div>
 
-          <div class="hero-visual" aria-label="Saytlar va analitika vizualizatsiyasi">
-            <div class="dashboard-card card-main">
-              <div class="card-head">
-                <span class="dot green"></span>
-                <span class="dot yellow"></span>
-                <span class="dot red"></span>
+          <div class="news-grid">
+            <article class="story-card story-feature" data-category="hikoya muxlis">
+              <a class="story-image story-image-large" href="#tahlil" aria-label="Futbolning unutilmas lahzalari haqida o‘qish">
+                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=85" alt="Futbolchilar yashil maydonda birga to‘p surmoqda" loading="lazy" />
+                <span class="image-number">01</span>
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="story-meta"><span class="story-category">HIKOYA</span><span>5 DAQIQA O‘QISH</span></div>
+              <h3><a href="#tahlil">Oxirgi hushtakdan keyin ham tugamaydigan muhabbat</a></h3>
+              <p>Futbol bizga faqat g‘alabani emas, yana bir bor turib davom etishni ham o‘rgatadi.</p>
+            </article>
+
+            <article class="story-card" data-category="taktika">
+              <a class="story-image" href="#tahlil" aria-label="Zamonaviy futbol taktikasi haqida o‘qish">
+                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80" alt="Futbolchi maydonda to‘p bilan hujumga o‘tmoqda" loading="lazy" />
+                <span class="image-number">02</span>
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="story-meta"><span class="story-category">TAKTIKA</span><span>4 DAQIQA O‘QISH</span></div>
+              <h3><a href="#tahlil">Bo‘sh hududni ko‘rish — g‘alabaga yarim qadam</a></h3>
+              <p>To‘psiz harakat: o‘yinni o‘zgartiradigan, ko‘pincha ko‘zdan qochadigan san’at.</p>
+            </article>
+
+            <article class="story-card" data-category="muxlis hikoya">
+              <a class="story-image story-image-green" href="#tahlil" aria-label="Futbol muxlislari haqida o‘qish">
+                <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?auto=format&fit=crop&w=900&q=80" alt="Stadion va muxlislar tribunasi" loading="lazy" />
+                <span class="image-number">03</span>
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="story-meta"><span class="story-category">MUXLIS NIGOHI</span><span>6 DAQIQA O‘QISH</span></div>
+              <h3><a href="#tahlil">Tribunadagi ovoz: o‘n ikkinchi o‘yinchi kim?</a></h3>
+              <p>Jamoaga ishonch ba’zan bitta qo‘shiqdan boshlanadi. Tribunaning kuchi haqida.</p>
+            </article>
+
+            <article class="story-card story-wide" data-category="taktika hikoya">
+              <a class="story-image" href="#turnir" aria-label="Futbol darvozabonlari haqida o‘qish">
+                <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=1000&q=80" alt="Bo‘sh futbol maydoni va darvoza" loading="lazy" />
+                <span class="image-number">04</span>
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="story-content">
+                <div class="story-meta"><span class="story-category">MAYDON ICHIDA</span><span>3 DAQIQA O‘QISH</span></div>
+                <h3><a href="#turnir">Bir seyv va o‘zgargan butun bir o‘yin</a></h3>
+                <p>Darvozabon yolg‘iz qolgan lahzada — eng katta jasorat boshlanadi.</p>
+                <a href="#turnir" class="text-link story-read">Maqolani o‘qish <span aria-hidden="true">↗</span></a>
               </div>
-              <div class="stat-box">
-                <small>Oylik trafik</small>
-                <h3>+184%</h3>
-              </div>
-              <div class="bars" aria-hidden="true">
-                <span style="height: 35%"></span>
-                <span style="height: 52%"></span>
-                <span style="height: 46%"></span>
-                <span style="height: 72%"></span>
-                <span style="height: 88%"></span>
-                <span style="height: 100%"></span>
-              </div>
-            </div>
-            <div class="floating-card card-mini top">
-              <span class="mini-label">Conversion</span>
-              <strong>8.4%</strong>
-            </div>
-            <div class="floating-card card-mini bottom">
-              <span class="mini-label">Brand lift</span>
-              <strong>+92%</strong>
-            </div>
+            </article>
+          </div>
+          <p class="empty-state" hidden>Bu bo‘limda hozircha hikoya yo‘q.</p>
+        </div>
+      </section>
+
+      <section class="manifesto" id="tahlil">
+        <div class="shell manifesto-inner">
+          <div class="manifesto-image">
+            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1200&q=85" alt="Futbolchi maydonda to‘pni tepishga shaylanmoqda" loading="lazy" />
+            <span class="manifesto-image-label">MAYDONDA HAMMA NARSA MUMKIN.</span>
+          </div>
+          <div class="manifesto-copy">
+            <p class="section-kicker">BIZNING QARASH</p>
+            <h2>FUTBOLNI<br />HIS QIL.</h2>
+            <p>Biz shunchaki hisobni aytmaymiz. O‘yin ortidagi g‘oyani, qahramonlar ortidagi mehnatni va tribuna ortidagi yurakni ko‘ramiz.</p>
+            <a class="button button-lime" href="#turnir">Tribunaga qo‘shil <span aria-hidden="true">↗</span></a>
+            <div class="manifesto-signature">TRIBUNA<span>.</span> — O‘YINGA YURAKDAN.</div>
+          </div>
+          <span class="manifesto-orbit" aria-hidden="true">⚽</span>
+        </div>
+      </section>
+
+      <section class="section pillars-section" id="turnir">
+        <div class="shell">
+          <div class="section-heading">
+            <div><p class="section-kicker">BIZNING MAYDON</p><h2>BIZ <span>NIMANI</span><br />SEVAMIZ?</h2></div>
+            <p class="section-intro">Futbolga har xil tomondan qaraymiz. Muhimi — siz sevgan o‘yin haqida birga gaplashish.</p>
+          </div>
+          <div class="pillars-grid">
+            <a class="pillar-card" href="#yangiliklar"><span class="pillar-index">01 / HIKOYA</span><span class="pillar-symbol">✳</span><h3>HIKOYALAR</h3><span class="pillar-bottom">Maydondagi va maydon ortidagi <span>↗</span></span></a>
+            <a class="pillar-card pillar-card-lime" href="#yangiliklar"><span class="pillar-index">02 / TAHLIL</span><span class="pillar-symbol">⌁</span><h3>TAKTIKA</h3><span class="pillar-bottom">O‘yin ichidagi aqlli yechimlar <span>↗</span></span></a>
+            <a class="pillar-card pillar-card-dark" href="#yangiliklar"><span class="pillar-index">03 / TRIBUNA</span><span class="pillar-symbol">◉</span><h3>MUXLIS</h3><span class="pillar-bottom">Futbol muxlisi nigohidan <span>↗</span></span></a>
           </div>
         </div>
       </section>
 
-      <section class="logos" aria-label="Hamkorlar va platformalar">
-        <div class="container logos-row">
-          <span>Shopify</span>
-          <span>Google Ads</span>
-          <span>Instagram</span>
-          <span>Meta</span>
-          <span>Stripe</span>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container section-head">
-          <p class="eyebrow">Nega biz?</p>
-          <h2>Har bir loyihada dizayn, texnologiya va natija birga ishlaydi.</h2>
-        </div>
-
-        <div class="container about-grid">
-          <div class="feature-card">
-            <div class="icon">⚡</div>
-            <h3>Tezlik va qulaylik</h3>
-            <p>Saytingiz tez ochiladi, mobil qurilmalarda ajoyib ishlaydi va foydalanuvchiga qulay tajriba beradi.</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon">🎨</div>
-            <h3>Brendga mos dizayn</h3>
-            <p>Biz sizning biznesingiz uchun noyob, esda qolarli va professional vizual identikni yaratamiz.</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon">📈</div>
-            <h3>Sotuvga yo'naltirish</h3>
-            <p>Loyiha har bir elementini vositachilarni jalb qilish, savatga o'tkazish va biznes o'sishini ko'zlab quramiz.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt-bg" id="services">
-        <div class="container section-head">
-          <p class="eyebrow">Xizmatlar</p>
-          <h2>Avvaldan eng kerakli yechimlarni taqdim etamiz.</h2>
-        </div>
-
-        <div class="container service-grid">
-          <article class="service-card">
-            <span class="badge">01</span>
-            <h3>Landing page</h3>
-            <p>Mahsulot yoki xizmat uchun bir sahifali, kuchli taklifli va yuqori konvertatsiyali landing page.</p>
-          </article>
-          <article class="service-card">
-            <span class="badge">02</span>
-            <h3>Korporativ sayt</h3>
-            <p>Biznesni tanishtirish, xizmatlar, jamoa, portfolio va aloqa bo'limlarini birga jamlagan sayt.</p>
-          </article>
-          <article class="service-card">
-            <span class="badge">03</span>
-            <h3>Onlayn magazin</h3>
-            <p>Mahsulotlar, to'lovlar, savat va yetkazib berish jarayonini avtomatlashtirilgan online shop.</p>
-          </article>
-          <article class="service-card">
-            <span class="badge">04</span>
-            <h3>Branding & UX</h3>
-            <p>Brend identifikatsiyasi, logotip, ranglar, tipografiya va foydalanuvchi tajribasi.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="portfolio">
-        <div class="container section-head">
-          <p class="eyebrow">Portfolio</p>
-          <h2>Bazada muvaffaqiyatli ishlayotgan natijalar.</h2>
-        </div>
-
-        <div class="container portfolio-grid">
-          <article class="project-card">
-            <div class="project-thumb bg-one"></div>
-            <div class="project-body">
-              <h3>Sunrise Beauty</h3>
-              <p>Kosmetikalar brendiga mo'ljallangan premium beauty landing page.</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-thumb bg-two"></div>
-            <div class="project-body">
-              <h3>Urban Nest</h3>
-              <p>Uy joyi va interyer xizmatlari uchun ko'rsatuvchi korporativ sayt.</p>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-thumb bg-three"></div>
-            <div class="project-body">
-              <h3>Nova Cart</h3>
-              <p>Onlayn savdo platformasi, tezkor yetkazib berish va savat bayonoti bilan.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section pricing-section alt-bg" id="pricing">
-        <div class="container section-head">
-          <p class="eyebrow">Narxlar</p>
-          <h2>Kuchli va shaffof paketlar.</h2>
-        </div>
-
-        <div class="container pricing-grid">
-          <article class="price-card">
-            <h3>Starter</h3>
-            <div class="price"><span>$299</span>/oy</div>
-            <ul>
-              <li>1 sahifali landing page</li>
-              <li>Mobil responsiv</li>
-              <li>Kontakt formasi</li>
-              <li>Basic SEO</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary">Tanlash</a>
-          </article>
-
-          <article class="price-card featured">
-            <div class="popular">Eng mashhur</div>
-            <h3>Business</h3>
-            <div class="price"><span>$799</span>/oy</div>
-            <ul>
-              <li>Korporativ veb-sayt</li>
-              <li>Brend dizayn</li>
-              <li>Portfolio + blog</li>
-              <li>A/B testlar</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary">Tanlash</a>
-          </article>
-
-          <article class="price-card">
-            <h3>Pro</h3>
-            <div class="price"><span>$1499</span>/oy</div>
-            <ul>
-              <li>Onlayn magazin</li>
-              <li>To'lov va integratsiyalar</li>
-              <li>CRM va analytics</li>
-              <li>24/7 texnik qo'llab quvvat</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary">Tanlash</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="cta" id="contact">
-        <div class="container cta-box">
-          <div>
-            <p class="eyebrow">Bog'lanish</p>
-            <h2>Biznesingizni keyingi bosqichga olib chiqamiz.</h2>
-          </div>
-          <a href="mailto:hello@nexora.studio" class="btn btn-primary">hello@nexora.studio</a>
+      <section class="newsletter">
+        <div class="shell newsletter-inner">
+          <div><p class="section-kicker">TRIBUNADAN XAT</p><h2>FUTBOLDAN<br />UZOQLASHMA.</h2><p>Yangi hikoyalar kelishi bilan bilib tur.</p></div>
+          <a class="button button-lime" href="mailto:salom@tribuna.uz?subject=Tribuna%20yangiliklari">Yangiliklarga yozilish <span aria-hidden="true">↗</span></a>
+          <span class="newsletter-ball" aria-hidden="true">⚽</span>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© <span id="year"></span> Nexora Studio. Barcha huquqlar himoyalangan.</p>
-        <div class="footer-links">
-          <a href="#about">Biz haqimizda</a>
-          <a href="#services">Xizmatlar</a>
-          <a href="#contact">Aloqa</a>
-        </div>
+      <div class="shell footer-main">
+        <a class="brand footer-brand" href="#bosh-sahifa" aria-label="Tribuna bosh sahifaga qaytish"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-word">TRIBUNA<span class="brand-period">.</span></span></a>
+        <p>YASHIL MAYDON. KATTA HIKOYA.</p>
+        <a class="back-top" href="#bosh-sahifa">Yuqoriga <span aria-hidden="true">↑</span></a>
       </div>
+      <div class="shell footer-bottom"><span>© <span id="year"></span> TRIBUNA. BARCHA HUQUQLAR HIMOYALANGAN.</span><span>FUTBOLNI SEVIB YARATILDI <span class="footer-heart">♥</span></span></div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
