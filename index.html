@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
     <div class="announcement">
       <div class="shell announcement-inner">
         <span class="announcement-tag"><span class="live-dot"></span> FUTBOL RUHI</span>
@@ -38,7 +39,9 @@
           <a class="nav-link" href="#tahlil">Tahlil</a>
           <a class="nav-link" href="#turnir">Turnirlar</a>
         </nav>
-        <a class="nav-cta" href="#yangiliklar">O‘yin ichida <span aria-hidden="true">↗</span></a>
+        <button class="nav-cta account-open" type="button" aria-haspopup="dialog">
+          <span class="account-label">Muxlis bo‘lish</span><span aria-hidden="true">↗</span>
+        </button>
         <button class="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span>
         </button>
@@ -80,6 +83,17 @@
         <div class="ticker-track">
           <span>KATTA FUTBOL</span><i>✳</i><span>HAQIQIY HIKOYA</span><i>✳</i><span>SO‘NGGI DAQIQAGACHA</span><i>✳</i><span>MUXLIS BILAN BIRGA</span><i>✳</i>
           <span aria-hidden="true">KATTA FUTBOL</span><i aria-hidden="true">✳</i><span aria-hidden="true">HAQIQIY HIKOYA</span><i aria-hidden="true">✳</i><span aria-hidden="true">SO‘NGGI DAQIQAGACHA</span><i aria-hidden="true">✳</i><span aria-hidden="true">MUXLIS BILAN BIRGA</span><i aria-hidden="true">✳</i>
+        </div>
+      </section>
+
+      <section class="fan-zone" aria-label="Tribuna muxlislar klubi">
+        <div class="shell fan-zone-inner">
+          <div class="fan-zone-title">
+            <span class="fan-zone-mark" aria-hidden="true">T</span>
+            <div><span class="fan-zone-kicker">TRIBUNA FAN KLUBI</span><h2>O‘YINNI BIRGA HIS QIL.</h2></div>
+          </div>
+          <p>Demo profil yarat, sevimli jamoangni tanla va muxlislar davrasiga qo‘shil.</p>
+          <button class="fan-join" type="button" aria-haspopup="dialog">Klubga kirish <span aria-hidden="true">↗</span></button>
         </div>
       </section>
 
@@ -184,8 +198,8 @@
 
       <section class="newsletter">
         <div class="shell newsletter-inner">
-          <div><p class="section-kicker">TRIBUNADAN XAT</p><h2>FUTBOLDAN<br />UZOQLASHMA.</h2><p>Yangi hikoyalar kelishi bilan bilib tur.</p></div>
-          <a class="button button-lime" href="mailto:salom@tribuna.uz?subject=Tribuna%20yangiliklari">Yangiliklarga yozilish <span aria-hidden="true">↗</span></a>
+          <div><p class="section-kicker">FUTBOLGA YAQINROQ</p><h2>FUTBOLDAN<br />UZOQLASHMA.</h2><p>Futbolning eng qiziqarli hikoya va tahlillarini kashf et.</p></div>
+          <a class="button button-lime" href="#yangiliklar">Hikoyalarga o‘tish <span aria-hidden="true">↗</span></a>
           <span class="newsletter-ball" aria-hidden="true">⚽</span>
         </div>
       </section>
@@ -199,6 +213,38 @@
       </div>
       <div class="shell footer-bottom"><span>© <span id="year"></span> TRIBUNA. BARCHA HUQUQLAR HIMOYALANGAN.</span><span>FUTBOLNI SEVIB YARATILDI <span class="footer-heart">♥</span></span></div>
     </footer>
+
+    <dialog class="fan-dialog" aria-labelledby="fan-dialog-title">
+      <div class="dialog-topline"><span class="dialog-brand">TRIBUNA<span>.</span> FAN KLUBI</span><button class="dialog-close" type="button" aria-label="Oynani yopish">×</button></div>
+      <div class="dialog-content">
+        <div class="dialog-emblem" aria-hidden="true"><span>⚽</span></div>
+        <p class="section-kicker dialog-kicker">MUXLISLAR SAFIGA QO‘SHIL</p>
+        <h2 id="fan-dialog-title">MAYDON<br />SENIKI.</h2>
+        <p class="dialog-description">O‘zingga laqab tanla, sevimli jamoangni belgila va muxlislar klubiga kir.</p>
+        <div class="demo-notice"><span aria-hidden="true">i</span><span>Demo profil — parol so‘ralmaydi, ma’lumot serverga yuborilmaydi va saqlanmaydi.</span></div>
+        <form class="fan-form">
+          <label for="fan-name">Muxlis laqabi</label>
+          <input id="fan-name" name="fanName" type="text" minlength="2" maxlength="18" autocomplete="nickname" placeholder="Masalan, Sardor" required />
+          <label for="fan-team">Sevimli jamoang</label>
+          <select id="fan-team" name="fanTeam" required>
+            <option value="" disabled selected>Jamoani tanla</option>
+            <option value="Real Madrid">Real Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Manchester City">Manchester City</option>
+            <option value="Liverpool">Liverpool</option>
+            <option value="Boshqa jamoa">Boshqa jamoa</option>
+          </select>
+          <button class="button button-lime fan-submit" type="submit">Demo sifatida kirish <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="fan-profile" hidden>
+          <p class="profile-greeting"></p>
+          <p class="profile-team"></p>
+          <p class="profile-demo-note">Bu faqat vaqtinchalik demo. Sahifa yangilanganda profil o‘chadi.</p>
+          <button class="profile-logout" type="button">Demo profildan chiqish <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <div class="dialog-bottom"><span>FUTBOLNI SEVIB YARATILDI.</span><span>TRIBUNA © <span class="dialog-year"></span></span></div>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
